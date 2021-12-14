@@ -6,6 +6,8 @@ def get_data(slurm_idx, data_dir):
 
     In this case data_dir is a glob path, so /my/path/my_files_*.csv where * is wild.
 
+    TODO:  build proper docstring
+
     """
 
     # get all records associated with the sample matching the slurm_array_idx
