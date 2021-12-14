@@ -1,3 +1,5 @@
+[![build](https://github.com/crvernon/echo/actions/workflows/build.yml/badge.svg)](https://github.com/crvernon/echo/actions/workflows/build.yml)
+
 # echo
 A Python package to launch ensembles of GCAM runs
 
