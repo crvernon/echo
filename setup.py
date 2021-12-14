@@ -1,6 +1,7 @@
 import re
 from setuptools import setup, find_packages
 
+
 version = re.search(r"__version__ = ['\"]([^'\"]*)['\"]", open('echo/__init__.py').read(), re.M).group(1)
 
 
