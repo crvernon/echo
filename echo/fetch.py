@@ -19,7 +19,9 @@ def get_data(slurm_idx, data_dir):
     FROM
         '{data_dir}'
     WHERE
-        sample = {slurm_idx};
+        sample = {slurm_idx}
+    ORDER BY
+        field_1;
     """
 
     return duckdb.query(sql).df()
