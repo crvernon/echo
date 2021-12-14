@@ -1,1 +1,2 @@
-include echo/tests/data/*
+include echo/data/config.yml
+include echo/tests/data/*.csv

@@ -1,0 +1,22 @@
+# configuration file for launching a SLURM job on Deception
+
+# slurm settings
+job_name: test
+partition: slurm
+account: my_account
+output: 'slurm-%A.%a.out'
+error: 'slurm-%A.%a.err'
+nodes: 1
+ntasks: 1
+cpus_per_task: 1
+mem_per_cpu: '4G'
+time: '00:10:00'
+array: '0-1'
+mail_type: 'all'
+mail_user: '<my_email>'
+
+# run settings
+python_script: '<my_script>'
+output_job_script: '<output slurm script to write>'
+submit_job: True
+data_dir: '<glob path to data files>'
