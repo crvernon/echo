@@ -12,7 +12,7 @@ def get_data(glob_path: str, alternative_idx: None = int):
 
     if alternative_idx is None:
         # get slurm task id from environment; natively this will be type str
-        slurm_task_idx = os.environ["SLURM_ARRAY_TASK_ID"])
+        slurm_task_idx = os.environ["SLURM_ARRAY_TASK_ID"]
     else:
         slurm_task_idx = alternative_idx
 
