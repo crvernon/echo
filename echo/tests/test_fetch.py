@@ -23,7 +23,7 @@ class TestFetch(unittest.TestCase):
         glob_path = os.path.join(data_dir, 'file_*.csv')
 
         # get data from file query
-        df = fetch.get_data(slurm_idx=0, data_dir=glob_path)
+        df = fetch.get_data(glob_path=glob_path, alternative_idx=0)
 
         # compare outputs
         pd.testing.assert_frame_equal(TestFetch.COMP_DF, df)

@@ -1,7 +1,7 @@
 import duckdb
 
 
-def get_data(glob_path):
+def get_data(glob_path: str, alternative_idx: None = int):
     """Get data from a pool of CSV files containing our desired values to use when setting.
 
     In this case data_dir is a glob path, so /my/path/my_files_*.csv where * is wild.
@@ -10,8 +10,11 @@ def get_data(glob_path):
 
     """
 
-    # get slurm task id from environment; natively this will be type str
-    slurm_task_idx = os.environ["SLURM_ARRAY_TASK_ID"])
+    if alternative_idx is None:
+        # get slurm task id from environment; natively this will be type str
+        slurm_task_idx = os.environ["SLURM_ARRAY_TASK_ID"])
+    else:
+        slurm_task_idx = alternative_idx
 
     # get all records associated with the sample matching the slurm_array_idx
     sql = f"""
