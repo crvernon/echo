@@ -4,10 +4,11 @@
 import echo.fetch as fetch
 
 
-def gcam_worker(slurm_idx, data_dir):
+def gcam_worker(data_dir):
     """Fake model
 
     """
+
     # TODO:  build gcamwrapper worker but need to be able to install remotely on actions first
 
     # gcam = gw.Gcam("configuration_ref.xml", "/people/pralitp/test-framework/exe")
@@ -16,7 +17,7 @@ def gcam_worker(slurm_idx, data_dir):
     # ret = gcam.get_data(query, {"region": ['=', 'USA'], "year": ['<=', '1990']})
     #
     # # set would happen here
-    # setter_data = fetch.get_data(slurm_idx, data_dir)
+    # setter_data = fetch.get_data(data_dir)
     # print(setter_data)
     #
     # del gcam
