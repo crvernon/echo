@@ -4,6 +4,9 @@ import echo.config as cfg
 from echo.config import Config
 
 
+def slurm_header
+
+
 def run_slurm(config_file: '' = str, params: {} = dict):
     """Create and optionally submit a SLURM job script."""
 
@@ -45,7 +48,7 @@ source /rcfs/projects/GCAM/pyenv3.7.0/bin/activate
 
 STARTTIME=`date +%s`
 
-LD_PRELOAD=/rcfs/projects/GCAM/GCAM-libraries/lib/boost/libboost_python37.so.1.76.0 python {job.params.get('python_script')} $SLURM_ARRAY_TASK_ID {job.params.get('data_dir')}
+LD_PRELOAD=/rcfs/projects/GCAM/GCAM-libraries/lib/boost/libboost_python37.so.1.76.0 python {job.params.get('python_script')} {job.params.get('data_dir')}
 
 ENDTIME=`date +%s`
 RUNTIME=$((ENDTIME-STARTTIME))
