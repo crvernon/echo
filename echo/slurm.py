@@ -4,10 +4,8 @@ import echo.config as cfg
 from echo.config import Config
 
 
-def slurm_header
 
-
-def run_slurm(config_file: '' = str, params: {} = dict):
+def launch_deception(config_file: '' = str, params: {} = dict):
     """Create and optionally submit a SLURM job script."""
 
     # instantiate a config instance
@@ -66,6 +64,7 @@ echo "Run completed in $RUNTIME seconds."
         os.system(cmd)
 
 
+# TODO:  remove this because this will be called from package
 if __name__ == "__main__":
 
     param_dict = {'job_name': 'gcam_test',
@@ -86,4 +85,4 @@ if __name__ == "__main__":
                   'submit_job': True,
                   'data_dir': '/people/d3y010/test_gcamwrapper/data/file_*.csv'}
 
-    run_slurm(params=param_dict)
+    launch_deception(params=param_dict)
